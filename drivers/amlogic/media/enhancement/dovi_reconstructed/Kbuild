@@ -1,0 +1,10 @@
+obj-m += dovi_reconstructed.o
+dovi_reconstructed-y := module.o runtime_bridge.o
+include $(src)/core_objects.mk
+ccflags-y += -I$(src) -I$(srctree)/drivers/amlogic/media/enhancement/amdolby_vision
+ccflags-y += -std=gnu11 -Wno-declaration-after-statement -fno-builtin
+ccflags-y += -fstack-usage -Wframe-larger-than=2048 -Werror
+# Three recovered subtract-before-mask expressions trigger GCC's style warning.
+CFLAGS_dm_commit.o += -Wno-parentheses
+# Four independent clamps are written on one line in this validated core unit.
+CFLAGS_kernel_maps.o += -Wno-misleading-indentation

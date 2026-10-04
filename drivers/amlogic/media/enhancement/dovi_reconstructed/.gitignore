@@ -1,0 +1,6 @@
+/_kernel/
+*.su
+*.mod.c
+*.mod
+*.order
+Module.symvers
