@@ -1,0 +1,161 @@
+{
+  "status": "passed",
+  "validated_utc": "2026-10-04T05:44:32.119426+00:00",
+  "kernel_repository": "https://github.com/pannal/linux-amlogic",
+  "kernel_tag": "T4c",
+  "kernel_commit": "3a4dcb1466bbf9a9d8b0d54ea8d2ab3ff7d656a5",
+  "kernel_source_kind": "existing extracted T4c archive; provider source and both host headers verified by SHA-256",
+  "kernel_input_sha256": {
+    "config": "ec4a0b93e25f67eb97de8c4ddd62219dfe911525f0662f531b8edc3ff36e295b",
+    "module_symvers": "76de91da469da318e9aa91de8382c38c6ecd3e33ba9057018d7715dd04bd8d05",
+    "host_header": "a55c61016af910490481ef4742923828c26d5f05b69a7e7d859ccac786bd92f0",
+    "host_source": "c7bfd25bbb1d5cfdeb421a2357644ed3c5a505c5a81e2d6d29d9af506bf3275b",
+    "public_header": "fa608b367c78ee1bf95151952d4f4318f2b29b28e1fab17eeaed929eb57352df"
+  },
+  "compiler": "aarch64-linux-gnu-gcc (GCC) 15.2.1 20250808 (Red Hat Cross 15.2.1-1)",
+  "core_source_count": 66,
+  "glue_source_count": 2,
+  "source_manifest_sha256": "e855f2a1d91873fee5d685642bc74f98ba0c2f290aed33ff055506006f87f38a",
+  "source_files_verified": 148,
+  "source_matches_reconstruction": true,
+  "source_normalization": "LF line endings; blank-line trailing whitespace removed in dm_commit.c; no C tokens changed",
+  "kbuild_objects_match_manifest": true,
+  "build_command": "bash build.sh MODULE_PATH T4C_SOURCE_PATH PREPARED_T4C_OUTPUT_PATH",
+  "scope": "Fresh packaged-source module build and static ABI/CRC checks; device loading and playback pending",
+  "module_sha256": "1caaf88b292ca470b8958d4f82e4dbae4b5f5092d733ce1b817bd5e0f6d6993d",
+  "machine": "EM_AARCH64",
+  "vermagic": "4.9.269 SMP preempt mod_unload modversions aarch64",
+  "imports": [
+    "_mcount",
+    "dump_stack",
+    "get_meson_cpu_version",
+    "printk",
+    "register_dv_functions",
+    "vprintk"
+  ],
+  "versions": {
+    "module_layout": "0x19e145ad",
+    "_mcount": "0x1fdc7df2",
+    "get_meson_cpu_version": "0xdccfd96a",
+    "printk": "0x27e1a049",
+    "vprintk": "0xbf8ba54a",
+    "dump_stack": "0x6b2dc060",
+    "register_dv_functions": "0xbace617d"
+  },
+  "callback_table_bytes": 48,
+  "callback_slots": [
+    {
+      "offset": 0,
+      "target": "",
+      "section_offset": 0
+    },
+    {
+      "offset": 8,
+      "target": "dovi_metadata_init",
+      "section_offset": 528
+    },
+    {
+      "offset": 16,
+      "target": "dovi_metadata_reset",
+      "section_offset": 592
+    },
+    {
+      "offset": 24,
+      "target": "metadata_process",
+      "section_offset": 164
+    },
+    {
+      "offset": 32,
+      "target": "dovi_metadata_release",
+      "section_offset": 736
+    },
+    {
+      "offset": 40,
+      "target": "control_process",
+      "section_offset": 0
+    }
+  ],
+  "module_exit": false,
+  "stack_usage": {
+    "functions": 287,
+    "maximum_frame_bytes": 1424,
+    "largest_frames": [
+      {
+        "function": "reduce_trims",
+        "bytes": 1424,
+        "kind": "static",
+        "file": "core/.tmp_trim_reduction.su"
+      },
+      {
+        "function": "init_cp_mmg",
+        "bytes": 1328,
+        "kind": "static",
+        "file": "core/.tmp_control_init.su"
+      },
+      {
+        "function": "update_dm_ext_for_hdmi_with_ops",
+        "bytes": 1104,
+        "kind": "static",
+        "file": "core/.tmp_control_metadata.su"
+      },
+      {
+        "function": "update_dm_l0_for_hdmi_with_ops",
+        "bytes": 1040,
+        "kind": "static",
+        "file": "core/.tmp_control_metadata.su"
+      },
+      {
+        "function": "control_path_with_ops",
+        "bytes": 480,
+        "kind": "static",
+        "file": "core/.tmp_control_path.su"
+      },
+      {
+        "function": "ext_blocks_read",
+        "bytes": 416,
+        "kind": "static",
+        "file": "core/.tmp_ext_blocks.su"
+      },
+      {
+        "function": "ext_block_payload_read",
+        "bytes": 368,
+        "kind": "static",
+        "file": "core/.tmp_ext_blocks.su"
+      },
+      {
+        "function": "rpu_header_read",
+        "bytes": 352,
+        "kind": "static",
+        "file": "core/.tmp_rpu_header.su"
+      },
+      {
+        "function": "mapping_read",
+        "bytes": 320,
+        "kind": "static",
+        "file": "core/.tmp_rpu_payload.su"
+      },
+      {
+        "function": "store_md",
+        "bytes": 304,
+        "kind": "static",
+        "file": "core/.tmp_dm_payload.su"
+      },
+      {
+        "function": "commit_dm_color",
+        "bytes": 288,
+        "kind": "static",
+        "file": "core/.tmp_dm_commit_bindings.su"
+      },
+      {
+        "function": "commit_dm_metadata",
+        "bytes": 272,
+        "kind": "static",
+        "file": "core/.tmp_dm_commit_bindings.su"
+      }
+    ],
+    "warning_limit_bytes": 2048,
+    "kernel_thread_stack_bytes": 16384,
+    "scope": "Individual optimized frames; not a cumulative runtime call-chain bound"
+  },
+  "preserved_kernel_inputs_unchanged": true
+}
